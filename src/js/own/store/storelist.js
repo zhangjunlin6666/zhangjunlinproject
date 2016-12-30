@@ -1,0 +1,22 @@
+define(['jquery'],function(){
+	return function(){
+		$(".all>span").click(function(){
+			$(this).css({
+				color:"black",
+				fontWeight:700
+			}).siblings().css({
+				color:"cornflowerblue",
+				fontWeight:"normal"
+			})
+		})
+		$(".details>ul>li").click(function(){
+			$(this).css({
+				color:"black",
+				fontWeight:"bold"
+			}).siblings().css({
+				color:"dodgerblue",
+				fontWeight:"normal"
+				})
+		})
+	}
+})
