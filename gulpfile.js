@@ -16,8 +16,8 @@ gulp.task("webserver",function(){
 });
 /*html压缩*/
 gulp.task('html',function(){
-	return gulp.src('src/html/**/*.html')
-	.pipe(gulp.dest('dist/html'))
+	return gulp.src('src/*.html')
+	.pipe(gulp.dest('dist'))
 });
 /*js脚本的压缩*/
 gulp.task("ys",function(){
@@ -48,4 +48,4 @@ gulp.task("watch",function(){
 });
 
 /*默认任务*/
-gulp.task("default",["webserver","watch","ys","images","minify-css"]);
+gulp.task("default",["webserver","watch","ys","images","minify-css","html"]);
